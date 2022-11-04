@@ -1,0 +1,91 @@
+/*--forms-footer-*/
+.form-container {
+  width: 100%;
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+.form-footer__title {
+  font-weight: 700;
+  @include font(var(--main-font-size), 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--footer-logo-color);
+  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.form-container__input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  height: 50px;
+  width: 310px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+    padding-left: 18px;
+  }
+
+  transition: border var(--trans), color var(--trans);
+  & input::placeholder {
+    font-weight: 400;
+    @include font(16px, 1.25, 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form-container__label input:hover,
+.form-container__label input:focus {
+  outline: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-container__btn {
+  @media screen and (max-width: 1199px) {
+    height: 50px;
+  }
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: inherit;
+  font-weight: 700;
+  @include font(16px, 1.68, 00.06em);
+  text-align: center;
+
+  color: var(--color-icon-focus);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  min-width: 200px;
+
+  transition: background-color var(--trans);
+  &:hover,
+  &:focus {
+    background-color: var(--color-btn);
+  }
+}
+
+.form-container__btn {
+  fill: var(--color-icon-focus);
+}

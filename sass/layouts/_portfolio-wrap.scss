@@ -1,0 +1,72 @@
+/*portfolio основна частина*/
+.menu-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.menu-portfolio__item {
+  background-color: var(--general-back-color);
+  width: calc((100% - 60px) / 3);
+}
+
+.menu-portfolio__link {
+  display: block;
+
+  transition: box-shadow var(--trans);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  border: 1px solid var(--border-color-portfolio);
+  border-top: none;
+}
+
+.info-container__title {
+  @include font(18px, 2, 0.06em);
+  color: var(--color-title-secondary);
+
+  margin-bottom: 4px;
+}
+
+.info-container__text {
+  @include font(var(--second-font-size), 1.18, 00.03em);
+  color: var(--base-text-color);
+}
+
+/*виїздні вікна в портфоліо*/
+.box-card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.box-card__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  transition: transform var(--trans);
+
+  font-weight: 400;
+  @include font(18px, 1.56, 00.03em);
+  padding: 63px 24px;
+  height: 100%;
+
+  color: var(--color-icon-focus);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  overflow: auto;
+
+  .menu-portfolio__link:hover & {
+    transform: translateY(0);
+  }
+}

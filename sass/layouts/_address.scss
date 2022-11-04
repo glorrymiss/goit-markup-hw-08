@@ -1,0 +1,26 @@
+.box-footer {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 105px;
+  }
+}
+
+.footer-address__link {
+  display: block;
+  justify-content: center;
+  font-style: normal;
+  @include font(var(--main-font-size), 1.71, 0.03em);
+
+  color: var(--general-back-color);
+  transition: color var(--trans);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer-address__link--light {
+  color: var(--footer-mail-tel-color);
+}

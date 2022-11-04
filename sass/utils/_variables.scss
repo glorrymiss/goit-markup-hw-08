@@ -1,0 +1,33 @@
+:root {
+  --main-font-size: 14px;
+  --second-font-size: 16px;
+  --btn-size: 16px;
+  --form-font-size: 12px;
+  --color-title-secondary: #212121;
+  --color-title-third: #212121;
+  --base-text-color: #757575;
+  --accent-color: #2196f3;
+  --general-back-color: #ffffff;
+  --footer-logo-color: #ffffff;
+  --second-back-color: #f5f4fa;
+  --back-color-footer: #2f303a;
+  --back-color-hero: #c4c4c4;
+  --color-btn: #188ce8;
+  --color-btn-name: #212121;
+  --header-logo-color: #212121;
+  --header-link-color: #212121;
+  --back-btn-portfolio: #f5f4fa;
+  --footer-mail-tel-color: rgba(255, 255, 255, 0.6);
+  --color-box-shadow: rgba(0, 0, 0, 0.15);
+  --border-color: #ececec;
+  --border-color-portfolio: #eeeeee;
+  --color-icon: #afb1b8;
+  --color-icon-focus: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.2);
+  --hero-gradient: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+
+  --trans: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

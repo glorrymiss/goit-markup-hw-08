@@ -22,7 +22,7 @@
   </head>
   <body>
     <!--header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo navigation__logo link" href="./index.html"
@@ -64,8 +64,54 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn"></button>
       </div>
-    </header> -->
+      <div class="box-menu-mob">
+        <button type="button" class="menu-close-btn"></button>
+        <div class="container">
+          <ul class="menu-mob list">
+            <li class="menu-mob__item">
+              <a class="menu-mob__link link" href="#">Студія</a>
+            </li>
+            <li class="menu-mob__item">
+              <a class="menu-mob__link link" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="menu-mob__item">
+              <a class="menu-mob__link link" href="#"> Контакти</a>
+            </li>
+          </ul>
+          <ul class="menu-contacts">
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-menu-soc">
+            <li class="mob-menu-soc__item">
+              <a class="mob-menu-soc__link" href="#">Instagram</a>
+            </li>
+            <li class="mob-menu-soc__item">
+              <a class="mob-menu-soc__link" href="#">Twitter</a>
+            </li>
+            <li class="mob-menu-soc__item">
+              <a class="mob-menu-soc__link" href="#">Facebook</a>
+            </li>
+            <li class="mob-menu-soc__item">
+              <a class="mob-menu-soc__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    -->
     <!--main part-->
     <main>
       <!--section hero-->
@@ -113,19 +159,38 @@
         </div>
       </section>
       <!--section third-->
-      <!-- <section class="work section">
+      <section class="work section">
         <div class="container">
           <h2 class="work__title title">Чим ми займаємося</h2>
           <ul class="menu-work list">
             <li class="menu-work__item">
               <div class="thumb-work">
-                <img
-                  src="./images/box1_jpg.jpg"
-                  alt="Людина працює за комп'ютером"
-                  width="370"
-                  height="294"
-                  class="thumb-work__img"
-                />
+                <picture class="thumb-work__img">
+                  <source
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                    srcset="
+                      ./images/works/box-1-webp.webp    1x,
+                      ./images/works/box-1-2x-webp.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/works/box-1.jpg    1x,
+                      ./images/works/box-1-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/works/box-1.jpg"
+                    alt="Людина працює за комп'ютером"
+                    width="370"
+                  />
+                  <!-- <div class="block">
+                    <p class="block__text">Десктопні додатки</p>
+                  </div> -->
+                </picture>
                 <div class="block">
                   <p class="block__text">Десктопні додатки</p>
                 </div>
@@ -133,13 +198,32 @@
             </li>
             <li class="menu-work__item">
               <div class="thumb-work">
-                <img
-                  src="./images/box2_jpg.jpg"
-                  alt="Людина працює за комп'ютером і телефоном"
-                  width="370"
-                  height="294"
-                  class="thumb-work__img"
-                />
+                <picture class="thumb-work__img">
+                  <source
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                    srcset="
+                      ./images/works/box-2-desk-webp.webp    1x,
+                      ./images/works/box-2-desk-2x-webp.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/works/box-2-desk.jpg    1x,
+                      ./images/works/box-2-desk-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/works/box-2-desk.jpg"
+                    alt="Людина працює за комп'ютером"
+                    width="370"
+                  />
+                  <!-- <div class="block">
+                    <p class="block__text">Мобільні додатки</p>
+                  </div> -->
+                </picture>
                 <div class="block">
                   <p class="block__text">Мобільні додатки</p>
                 </div>
@@ -147,61 +231,128 @@
             </li>
             <li class="menu-work__item">
               <div class="thumb-work">
-                <img
-                  src="./images/box3_jpg.jpg"
-                  alt="Людина працює за планшетом"
-                  width="370"
-                  height="294"
-                  class="thumb-work__img"
-                />
-                <div class="block">
-                  <p class="block__text">Дизайнерські рішення</p>
-                </div>
+                <picture class="thumb-work__img">
+                  <source
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                    srcset="
+                      ./images/works/box-3-desk-webp.webp    1x,
+                      ./images/works/box-3-desk-2x-webp.webp 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/works/box-3-desk.jpg    1x,
+                      ./images/works/box-3-desk-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/works/box-3-desk.jpg"
+                    alt="Людина працює за комп'ютером"
+                    width="370"
+                  />
+                  <!-- <div class="block">
+                    <p class="block__text">Дизайнерські рішення</p>
+                  </div> -->
+                </picture>
+              </div>
+              <div class="block">
+                <p class="block__text">Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--section our team-->
       <section class="team section">
         <div class="container">
           <h2 class="team__title title">Наша команда</h2>
           <ul class="menu-team list">
             <li class="menu-team__item">
-              <img
-                src="./images/ihor_dem_jpg.jpg"
-                alt="Усміхнений хлопець в окулярах"
-                width="260"
-                height="270"
-                class="menu-team__image"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/igor-dem-desk-webp.webp    1x,
+                    ./images/team/igor-dem-desk-2x-webp.webp 2x
+                  "
+                />
+
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/igor-dem-desk.jpg    1x,
+                    ./images/team/igor-dem-desk-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/igor-dem-tablet-webp.webp    1x,
+                    ./images/team/igor-dem-tablet-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/igor-dem-tablet.jpg    1x,
+                    ./images/team/igor-dem-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/igor-dem-mob-webp.webp    1x,
+                    ./images/team/igor-dem-mob-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/team/igor-dem-mob.jpg    1x,
+                    ./images/team/igor-dem-mob-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  src="./images/ihor_dem_jpg.jpg"
+                  alt="Усміхнений хлопець в окулярах"
+                  width="450"
+                  class="menu-team__image"
+                />
+              </picture>
               <div class="block-team">
                 <h3 class="block-team__title">Ігор Дем'яненко</h3>
                 <p class="block-team__text" lang="en">Product Designer</p>
                 <ul class="team-soc list">
                   <li class="team-soc__item">
-                    <a class="team-soc__link link" href="">
+                    <a class="team-soc__link link" href="#">
                       <svg class="team-soc__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-soc__item">
-                    <a class="team-soc__link link" href="">
+                    <a class="team-soc__link link" href="#">
                       <svg class="team-soc__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-soc__item">
-                    <a class="team-soc__link link" href="">
+                    <a class="team-soc__link link" href="#">
                       <svg class="team-soc__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-soc__item">
-                    <a class="team-soc__link link" href="">
+                    <a class="team-soc__link link" href="#">
                       <svg class="team-soc__icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
@@ -211,13 +362,60 @@
               </div>
             </li>
             <li class="menu-team__item">
-              <img
-                src="./images/olha_rep_img.jpg"
-                alt="Усміхнена блондинка в окулярах>"
-                width="260"
-                height="270"
-                class="menu-team__image"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/olha-desk-webp.webp    1x,
+                    ./images/team/olha-desk-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/olha-desk.jpg    1x,
+                    ./images/team/olha-desk-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/olha-tablet-webp.webp    1x,
+                    ./images/team/olha-tablet-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/olha-tablet.jpg    1x,
+                    ./images/team/olha-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/olha-mob-webp.webp    1x,
+                    ./images/team/olha-mob-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/team/olha-mob.jpg    1x,
+                    ./images/team/olha-mob-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/olha_rep_img.jpg"
+                  alt="Усміхнена блондинка в окулярах>"
+                  width="450"
+                  class="menu-team__image"
+                />
+              </picture>
+
               <div class="block-team">
                 <h3 class="block-team__title">Ольга Рєпіна</h3>
                 <p class="block-team__text" lang="en">Frontend Developer</p>
@@ -254,13 +452,60 @@
               </div>
             </li>
             <li class="menu-team__item">
-              <img
-                src="./images/mukola_tar_jpg.jpg"
-                alt="Усміхнений хлопець"
-                width="260"
-                height="270"
-                class="menu-team__image"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/nicholas-desk-webp.webp    1x,
+                    ./images/team/nicholas-desk-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/nicholas-desk.jpg    1x,
+                    ./images/team/nicholas-desk-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/nicholas-tablet-webp.webp    1x,
+                    ./images/team/nicholas-tablet-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/nicholas-tablet.jpg    1x,
+                    ./images/team/nicholas-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/nicholas-mob-webp.webp    1x,
+                    ./images/team/nicholas-mob-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/team/nicholas-mob.jpg    1x,
+                    ./images/team/nicholas-mob-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/mukola_tar_jpg.jpg"
+                  alt="Усміхнений хлопець"
+                  width="450"
+                  class="menu-team__image"
+                />
+              </picture>
+
               <div class="block-team">
                 <h3 class="block-team__title">Микола Тарасов</h3>
                 <p class="block-team__text" lang="en">Marketing</p>
@@ -297,11 +542,57 @@
               </div>
             </li>
             <li class="menu-team__item">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/mykhailo-desk-webp.webp    1x,
+                    ./images/team/mykhailo-desk-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/team/mykhailo-desk.jpg    1x,
+                    ./images/team/mykhailo-desk-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/mykhailo-tablet-webp.webp    1x,
+                    ./images/team/mykhailo-tablet-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="
+                    ./images/team/mykhailo-tablet.jpg    1x,
+                    ./images/team/mykhailo-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  type="image/webp"
+                  srcset="
+                    ./images/team/mykhailo-mob-webp.webp    1x,
+                    ./images/team/mykhailo-mob-2x-webp.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width:767px)"
+                  srcset="
+                    ./images/team/mykhailo-mob.jpg    1x,
+                    ./images/team/mykhailo-mob-2x.jpg 2x
+                  "
+                />
+              </picture>
               <img
                 src="./images/mychailo.jermak_jpg.jpg"
                 alt="Брюнет в окулярах з бородою"
-                width="260"
-                height="270"
+                width="450"
                 class="menu-team__image"
               />
               <div class="block-team">

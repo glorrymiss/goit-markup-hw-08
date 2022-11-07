@@ -24,9 +24,12 @@
 }
 
 .navigation__logo {
-  margin-right: 93px;
+  margin-right: 88px;
   padding-top: 24px;
   padding-bottom: 25px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .logo-part--dark {
@@ -34,14 +37,41 @@
 }
 
 .menu {
-  display: flex;
-  gap: 50px;
-  margin-right: 318px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-right: 96px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 50px;
+    margin-right: 318px;
+  }
+}
+
+.menu__item:nth-child(1) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 56px;
+  }
+}
+
+.menu__item:nth-child(2) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 51px;
+  }
 }
 
 .menu-second {
-  display: flex;
-  gap: 30px;
+  display: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .menu__link {
@@ -77,13 +107,9 @@
 
 .menu-second__link {
   font-weight: 500;
-  @include font(var(--main-font-size), 1.14, 0.02em);
-
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @include font(var(--form-font-size), 1.17, 0.02em);
 
   display: flex;
-  align-items: center;
   fill: var(--color-icon);
 
   transition: color var(--trans), fill var(--trans);
@@ -91,6 +117,12 @@
   &:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include font(var(--main-font-size), 1.14, 0.02em);
+    align-items: center;
   }
 }
 
@@ -100,4 +132,35 @@
 
 .menu-second__icon {
   margin-right: 10px;
+}
+
+.menu-mob-btn {
+  margin-left: 284px;
+  margin-right: 23px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.box-menu-mob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--general-back-color);
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-close-btn {
+  @media screen and (max-width: 767) {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+  }
 }

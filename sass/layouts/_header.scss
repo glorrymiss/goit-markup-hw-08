@@ -164,3 +164,40 @@
     right: 25px;
   }
 }
+
+.menu-mob {
+  @media screen and (max-width: 767) {
+    margin-bottom: 302px;
+  }
+}
+
+.menu-mob__link {
+  @media screen and (max-width: 767) {
+    font-weight: 500;
+    font-size: 8vw;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+
+    color: var(--header-link-color);
+    transition: color var(--trans);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.menu-contacts__link:first-child {
+  @media screen and (max-width: 767) {
+    font-weight: 500;
+    font-size: 7vw;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+  }
+}

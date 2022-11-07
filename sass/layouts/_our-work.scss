@@ -37,14 +37,13 @@
 
 .thumb-work {
   @media screen and (min-width: 1200px) {
-    width: 100%;
     position: relative;
   }
 }
 
 .block {
   @media screen and (min-width: 1200px) {
-    // position: absolute;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;

@@ -25,8 +25,12 @@
 
 .navigation__logo {
   margin-right: 88px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
   }
@@ -131,73 +135,35 @@
 }
 
 .menu-second__icon {
-  margin-right: 10px;
-}
-
-.menu-mob-btn {
-  margin-left: 284px;
-  margin-right: 23px;
-
-  @media screen and (min-width: 768px) {
-    display: none;
+  margin-right: 8px;
+  &:first-child {
+    max-width: 14px;
+    height: 10px;
   }
-}
-
-.box-menu-mob {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--general-back-color);
-  width: 100vw;
-  height: 100vh;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  @media screen and (min-width: 768px) {
-    display: none;
+  &:last-child {
+    width: 10px;
+    height: 14px;
   }
-}
-
-.menu-close-btn {
-  @media screen and (max-width: 767) {
-    position: absolute;
-    top: 21px;
-    right: 25px;
-  }
-}
-
-.menu-mob {
-  @media screen and (max-width: 767) {
-    margin-bottom: 302px;
-  }
-}
-
-.menu-mob__link {
-  @media screen and (max-width: 767) {
-    font-weight: 500;
-    font-size: 8vw;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-bottom: 32px;
-
-    color: var(--header-link-color);
-    transition: color var(--trans);
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    &:first-child {
+      width: 16px;
+      height: 12px;
     }
     &:last-child {
-      margin-bottom: 0;
+      width: 10px;
+      height: 16px;
     }
   }
 }
 
-.menu-contacts__link:first-child {
-  @media screen and (max-width: 767) {
-    font-weight: 500;
-    font-size: 7vw;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-
-    color: var(--accent-color);
+.menu-open-btn {
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: 284px;
+    margin-right: 23px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }

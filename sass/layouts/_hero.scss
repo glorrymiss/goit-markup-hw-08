@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: var(--hero-gradient)
+  background-image: var(--hero-gradient),
     url("../images/bg-hero/bg-hero-mob-webp.webp");
   background-image: var(--hero-gradient),
     url("../images/bg-hero/bg-hero-mob.jpg");
@@ -76,9 +76,14 @@
 
 .post-hero__title {
   font-weight: 900;
-  @include font(5vw, 1.6, 0.06em);
+  @include font(5vw, 1.62, 0.06em);
+  max-width: 360px;
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+  }
   @media screen and (min-width: 1200px) {
-    @include font(3vw, 1.36, 0.06em);
+    @include font(44px, 1.36, 0.06em);
+    max-width: 696px;
   }
 
   text-align: center;

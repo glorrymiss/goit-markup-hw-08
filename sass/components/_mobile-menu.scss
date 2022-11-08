@@ -1,6 +1,8 @@
 .box-menu-mob {
   @media screen and (max-width: 767px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     background-color: var(--general-back-color);
@@ -16,14 +18,7 @@
   }
 }
 
-.box-mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .menu-close-btn {
-  display: none;
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -39,6 +34,9 @@
   &:hover,
   &:focus {
     fill: var(--accent-color);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 

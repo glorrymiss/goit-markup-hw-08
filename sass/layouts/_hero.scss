@@ -50,13 +50,10 @@
     }
   }
   @media screen and (min-width: 769px) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    height: 600px;
     background-image: var(--hero-gradient),
       url("../images/bg-hero/bg-hero-desk-webp.webp");
     background-image: var(--hero-gradient),
-      url("../images/bg-hero/bg-hero-desk-jpg.jpg");
+      url("../images/bg-hero/bg-hero-desk.jpg");
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -69,8 +66,11 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: var(--hero-gradient),
-        url("../images/bg-hero/bg-hero-desk-2x-jpg.jpg");
+        url("../images/bg-hero/bg-hero-desk-2x.jpg");
     }
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
   }
 }
 

@@ -165,6 +165,7 @@
   display: block;
   background-color: transparent;
   border: none;
+  fill: var(--header-link-color);
 
   @media screen and (min-width: 768px) {
     display: none;

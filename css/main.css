@@ -141,7 +141,12 @@ body {
 /* флекси в хедері*/
 .header__container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    align-items: center;
+  }
 }
 
 .navigation {
@@ -314,12 +319,10 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .menu-open-btn {
-    display: block;
-    margin-left: 284px;
-    margin-right: 23px;
-  }
+.menu-open-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .menu-open-btn {

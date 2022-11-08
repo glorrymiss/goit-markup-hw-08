@@ -5,7 +5,11 @@
 /* флекси в хедері*/
 .header__container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
 }
 
 .navigation {
@@ -158,11 +162,10 @@
 }
 
 .menu-open-btn {
-  @media screen and (max-width: 767px) {
-    display: block;
-    margin-left: 284px;
-    margin-right: 23px;
-  }
+  display: block;
+  background-color: transparent;
+  border: none;
+
   @media screen and (min-width: 768px) {
     display: none;
   }

@@ -298,7 +298,7 @@ body {
   margin-right: 8px;
 }
 .menu-second__icon:first-child {
-  max-width: 14px;
+  width: 14px;
   height: 10px;
 }
 .menu-second__icon:last-child {
@@ -358,8 +358,8 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 22px;
+    right: 24px;
     background-color: transparent;
     border: none;
     fill: var(--color-btn-name);
@@ -534,9 +534,6 @@ body {
 
 .post-hero__title {
   font-weight: 900;
-  font-size: 5vw;
-  line-height: 1.62;
-  letter-spacing: 0.06em;
   max-width: 360px;
   text-align: center;
   text-transform: uppercase;
@@ -545,6 +542,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 360px;
+}
+@media screen and (max-width: 479px) {
+  .post-hero__title {
+    font-size: 5vw;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+  }
 }
 @media screen and (min-width: 480px) {
   .post-hero__title {
@@ -556,14 +560,6 @@ body {
 @media screen and (min-width: 1200px) {
   .post-hero__title {
     font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    max-width: 696px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .post-hero__title {
-    font-size: 4vw;
     line-height: 1.36;
     letter-spacing: 0.06em;
     max-width: 696px;
@@ -1212,9 +1208,9 @@ body {
 
 .modal-window {
   position: absolute;
-  top: 50%;
+  top: 93px;
   left: 50%;
-  transform: translate(-50%, -50%) scaleY(1);
+  transform: translate(-50%) scaleY(1);
   transition: transform var(--trans);
   width: 450px;
   min-height: 609px;
@@ -1223,11 +1219,19 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+@media screen and (min-width: 768px) {
+  .modal-window {
+    top: 208px;
+    transform: translateX(-50%);
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal-window {
     padding: 40px 40px 40px 40px;
-    width: 528px;
+    min-width: 528px;
     min-height: 581px;
+    transform: translate(-50%);
+    top: 225px;
   }
 }
 
@@ -1261,12 +1265,17 @@ body {
 /*текст-заголовок*/
 .modal-form__text {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 4vw;
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--color-btn-name);
   margin-bottom: 12px;
+}
+@media screen and (min-width: 480px) {
+  .modal-form__text {
+    font-size: 20px;
+  }
 }
 
 /*1-3 поля*/

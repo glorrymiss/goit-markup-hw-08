@@ -76,15 +76,7 @@
 
 .post-hero__title {
   font-weight: 900;
-  @include font(5vw, 1.62, 0.06em);
   max-width: 360px;
-  @media screen and (min-width: 480px) {
-    @include font(26px, 1.62, 0.06em);
-  }
-  @media screen and (min-width: 1200px) {
-    @include font(44px, 1.36, 0.06em);
-    max-width: 696px;
-  }
 
   text-align: center;
   text-transform: uppercase;
@@ -95,8 +87,15 @@
   margin-right: auto;
 
   max-width: 360px;
+  @media screen and (max-width: 479px) {
+    @include font(5vw, 1.62, 0.06em);
+  }
+
+  @media screen and (min-width: 480px) {
+    @include font(26px, 1.62, 0.06em);
+  }
   @media screen and (min-width: 1200px) {
-    @include font(4vw, 1.36, 0.06em);
+    @include font(44px, 1.36, 0.06em);
     max-width: 696px;
   }
 }

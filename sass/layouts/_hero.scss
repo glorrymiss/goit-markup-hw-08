@@ -79,7 +79,7 @@
   @include font(5vw, 1.62, 0.06em);
   max-width: 360px;
   @media screen and (min-width: 480px) {
-    font-size: 26px;
+    @include font(26px, 1.62, 0.06em);
   }
   @media screen and (min-width: 1200px) {
     @include font(44px, 1.36, 0.06em);

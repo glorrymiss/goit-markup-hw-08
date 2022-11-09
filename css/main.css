@@ -297,13 +297,15 @@ body {
 .menu-second__icon {
   margin-right: 8px;
 }
-.menu-second__icon:first-child {
-  width: 14px;
-  height: 10px;
-}
-.menu-second__icon:last-child {
-  width: 10px;
-  height: 14px;
+@media screen and (min-width: 768px) {
+  .menu-second__icon {
+    width: 14px;
+    height: 10px;
+  }
+  .menu-second__icon:last-child {
+    width: 10px;
+    height: 14px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .menu-second__icon {
@@ -887,6 +889,13 @@ body {
   margin-bottom: 50px;
   gap: 8px;
 }
+@media screen and (max-width: 767px) {
+  .menu-btn {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
 
 .menu-btn__button {
   font-family: inherit;
@@ -913,18 +922,43 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (min-width: 768px) {
+  .menu-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
 .menu-portfolio__item {
+  width: 100%;
   background-color: var(--general-back-color);
-  width: calc((100% - 60px) / 3);
+}
+@media screen and (min-width: 768px) {
+  .menu-portfolio__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-portfolio__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .menu-portfolio__link {
   display: block;
+  width: 100%;
+  height: 100%;
   transition: box-shadow var(--trans);
 }
 .menu-portfolio__link:hover, .menu-portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 768px) {
+  .menu-portfolio__link {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .info-container {
@@ -933,6 +967,11 @@ body {
   padding: 20px 24px;
   border: 1px solid var(--border-color-portfolio);
   border-top: none;
+}
+@media screen and (min-width: 768px) {
+  .info-container {
+    flex-grow: 1;
+  }
 }
 
 .info-container__title {
@@ -952,6 +991,7 @@ body {
 
 /*виїздні вікна в портфоліо*/
 .box-card {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -960,8 +1000,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
-  transition: transform var(--trans);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -971,6 +1009,8 @@ body {
   color: var(--color-icon-focus);
   background-color: rgba(33, 150, 243, 0.9);
   overflow: auto;
+  transform: translateY(100%);
+  transition: transform var(--trans);
 }
 .menu-portfolio__link:hover .box-card__text {
   transform: translateY(0);

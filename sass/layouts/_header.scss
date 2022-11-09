@@ -140,13 +140,14 @@
 
 .menu-second__icon {
   margin-right: 8px;
-  &:first-child {
+  @media screen and (min-width: 768px) {
     width: 14px;
     height: 10px;
-  }
-  &:last-child {
-    width: 10px;
-    height: 14px;
+
+    &:last-child {
+      width: 10px;
+      height: 14px;
+    }
   }
   @media screen and (min-width: 1200px) {
     margin-right: 10px;

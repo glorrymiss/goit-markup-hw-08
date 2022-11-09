@@ -1,5 +1,10 @@
 .menu-btn {
   display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+  }
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;

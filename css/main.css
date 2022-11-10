@@ -294,28 +294,38 @@ body {
   color: var(--base-text-color);
 }
 
-.menu-second__icon {
-  margin-right: 8px;
-}
 @media screen and (min-width: 768px) {
   .menu-second__icon {
-    width: 14px;
-    height: 10px;
-  }
-  .menu-second__icon:last-child {
-    width: 10px;
-    height: 14px;
+    margin-right: 8px;
   }
 }
 @media screen and (min-width: 1200px) {
   .menu-second__icon {
     margin-right: 10px;
   }
-  .menu-second__icon:first-child {
+}
+
+@media screen and (min-width: 768px) {
+  .icon-mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icon-mail {
     width: 16px;
     height: 12px;
   }
-  .menu-second__icon:last-child {
+}
+
+@media screen and (min-width: 768px) {
+  .icon-tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icon-tel {
     width: 10px;
     height: 16px;
   }
@@ -1410,10 +1420,17 @@ body {
   margin-left: 26px;
   position: relative;
   font-weight: 400;
-  font-size: 12px;
+  color: var(--base-text-color);
+  font-size: 3vw;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--base-text-color);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__label {
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-form__label {

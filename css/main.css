@@ -1413,50 +1413,9 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.modal-form__label {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-left: 26px;
-  position: relative;
-  font-weight: 400;
-  color: var(--base-text-color);
-  font-size: 3vw;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-@media screen and (min-width: 480px) {
-  .modal-form__label {
-    font-size: 12px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal-form__label {
-    font-size: var(--main-font-size);
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-  }
-}
-
-.modal-form__condition {
-  color: var(--accent-color);
-  -webkit-text-decoration: 1px solid var(--accent-color);
-          text-decoration: 1px solid var(--accent-color);
-}
-
-.modal-form__link {
-  -webkit-text-decoration: underline solid var(--accent-color);
-          text-decoration: underline solid var(--accent-color);
-}
-
-.modal-form__icon-check {
   position: absolute;
   top: 50%;
-  left: -15px;
+  left: -20px;
   transform: translateY(-60%);
   display: block;
   width: 16px;
@@ -1464,12 +1423,47 @@ body {
   border: 2px solid var(--color-btn-name);
   border-radius: 2px;
 }
-.modal-form__check:checked + .modal-form__icon-check {
+.modal-form__check:checked {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-image: url(../images/icon-check.svg);
   background-size: cover;
   background-origin: border-box;
+}
+
+.modal-form__label {
+  display: flex;
+  align-items: center;
+  margin-left: 26px;
+  margin-right: 6px;
+  position: relative;
+  color: var(--base-text-color);
+  font-weight: 400;
+  font-size: 2.3vw;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .modal-form__label {
+    font-size: var(--form-font-size);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__label {
+    font-size: var(--main-font-size);
+  }
+}
+
+.modal-form__condition {
+  color: var(--base-text-color);
+  -webkit-text-decoration: 1px solid var(--accent-color);
+          text-decoration: 1px solid var(--accent-color);
+}
+
+.modal-form__link {
+  -webkit-text-decoration: underline solid var(--accent-color);
+          text-decoration: underline solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .form-btn {
